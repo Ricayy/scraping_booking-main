@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module Odoo</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">Odoo</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cschmi%5Cpycharmprojects%5Cscraping_booking%5Cclass%5Codoo.py">c:\users\schmi\pycharmprojects\scraping_booking\class\odoo.py</a></td></tr></table>
+    <p><span class="code">#&nbsp;coding=utf8</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="xmlrpc.html">xmlrpc</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="Odoo.html#Odoo">Odoo</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Odoo">class <strong>Odoo</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">Classe&nbsp;<a href="#Odoo">Odoo</a>&nbsp;contenant&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Les&nbsp;attributs&nbsp;de&nbsp;connexion&nbsp;à&nbsp;<a href="#Odoo">Odoo</a>&nbsp;online<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Les&nbsp;méthodes&nbsp;de&nbsp;remplacements&nbsp;des&nbsp;valeurs&nbsp;par&nbsp;des&nbsp;identifiants&nbsp;pour&nbsp;la&nbsp;création&nbsp;de&nbsp;relation&nbsp;entre&nbsp;les&nbsp;modèles<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Les&nbsp;méthodes&nbsp;de&nbsp;publication&nbsp;de&nbsp;création&nbsp;de&nbsp;nouveaux&nbsp;contacts&nbsp;et&nbsp;de&nbsp;modifications&nbsp;des&nbsp;contacts&nbsp;existants<br>
+&nbsp;<br>
+Attributes<br>
+----------<br>
+__url_odoo&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Url&nbsp;de&nbsp;la&nbsp;bdd<br>
+__db_odoo&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;de&nbsp;la&nbsp;bdd<br>
+__user_odoo&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;d'utilisateur<br>
+__pwd_odoo&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Mot&nbsp;de&nbsp;passe<br>
+__auth_odoo&nbsp;:&nbsp;_Marshallable<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Instance&nbsp;d'authentification&nbsp;à&nbsp;<a href="#Odoo">Odoo</a>&nbsp;online,&nbsp;nécessaire&nbsp;à&nbsp;l'initialisation&nbsp;de&nbsp;modelsOdoo<br>
+__models_odoo&nbsp;:&nbsp;ServerProxy<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Instance&nbsp;de&nbsp;requête&nbsp;à&nbsp;<a href="#Odoo">Odoo</a>&nbsp;online,&nbsp;nécessaire&nbsp;pour&nbsp;les&nbsp;requêtes<br>
+&nbsp;<br>
+__app_contact&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;technique&nbsp;du&nbsp;modèle&nbsp;des&nbsp;contacts<br>
+__app_pays&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;technique&nbsp;du&nbsp;modèle&nbsp;des&nbsp;pays<br>
+__app_categorie_etablissement&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;technique&nbsp;du&nbsp;modèle&nbsp;des&nbsp;catégories&nbsp;des&nbsp;établissements<br>
+__app_classement_etablissement&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;technique&nbsp;du&nbsp;modèle&nbsp;des&nbsp;classements&nbsp;des&nbsp;établissements<br>
+__app_activite_principale&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;technique&nbsp;du&nbsp;modèle&nbsp;des&nbsp;activités&nbsp;principales<br>
+__app_activite_registre_metiers&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;technique&nbsp;du&nbsp;modèle&nbsp;des&nbsp;activités&nbsp;du&nbsp;hotel_data&nbsp;des&nbsp;métiers<br>
+__app_categorie_juridique&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;technique&nbsp;du&nbsp;modèle&nbsp;des&nbsp;catégories&nbsp;juridiques<br>
+__app_tranche_effectifs_etablissement&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;technique&nbsp;du&nbsp;modèle&nbsp;des&nbsp;tranches&nbsp;d'effectifs&nbsp;des&nbsp;établissements<br>
+__app_tranche_effectifs_unite_legale&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;technique&nbsp;du&nbsp;modèle&nbsp;des&nbsp;tranches&nbsp;d'efffectifs&nbsp;des&nbsp;unités&nbsp;légales<br>
+__app_categorie_note&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;technique&nbsp;du&nbsp;modèle&nbsp;des&nbsp;catégories&nbsp;des&nbsp;notes<br>
+&nbsp;<br>
+Methods<br>
+-------<br>
+__init__&nbsp;(self)&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Constructeur&nbsp;de&nbsp;la&nbsp;classe&nbsp;<a href="#Odoo">Odoo</a>,&nbsp;qui&nbsp;initialise&nbsp;l'authentification&nbsp;et&nbsp;le&nbsp;modèle&nbsp;des&nbsp;requêtes<br>
+query_search_read_name&nbsp;(self,&nbsp;app_name)&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Méthode&nbsp;de&nbsp;récupération&nbsp;des&nbsp;identifiants&nbsp;des&nbsp;labels&nbsp;d'un&nbsp;modèle<br>
+normalize_data&nbsp;(self,&nbsp;field_name,&nbsp;hotel_data,&nbsp;app_name)&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Méthode&nbsp;de&nbsp;récupération&nbsp;des&nbsp;identifiants&nbsp;et&nbsp;labels&nbsp;d'un&nbsp;modèle&nbsp;et&nbsp;de&nbsp;remplacement&nbsp;des&nbsp;valeurs&nbsp;par&nbsp;les&nbsp;identifiants<br>
+prepare_data&nbsp;(self,&nbsp;hotel_data)&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Méthode&nbsp;de&nbsp;remplacement&nbsp;des&nbsp;valeurs&nbsp;par&nbsp;des&nbsp;identifiants&nbsp;pour&nbsp;créer&nbsp;une&nbsp;relation&nbsp;entre&nbsp;les&nbsp;modèles&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;catégorie&nbsp;établissement<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;pays<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;classement&nbsp;établissement<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;activité&nbsp;principale<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;activité&nbsp;hotel_data&nbsp;métiers<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;catégorie&nbsp;juridique<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;tranche&nbsp;effectifs&nbsp;établissment<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;tranche&nbsp;effectifs&nbsp;unité&nbsp;légale<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;note&nbsp;établissement<br>
+query_put_odoo&nbsp;(self,&nbsp;id_odoo,&nbsp;hotel_data)&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Méthode&nbsp;de&nbsp;publication&nbsp;des&nbsp;modifications&nbsp;d'un&nbsp;établissement&nbsp;dans&nbsp;<a href="#Odoo">Odoo</a><br>
+query_search_id&nbsp;(self,&nbsp;url)&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Méthode&nbsp;de&nbsp;récupération&nbsp;de&nbsp;l'identifiant&nbsp;de&nbsp;la&nbsp;ligne&nbsp;<a href="#Odoo">Odoo</a>&nbsp;en&nbsp;fonction&nbsp;de&nbsp;l'url&nbsp;Booking<br>
+query_search_res_name&nbsp;(self,&nbsp;name)&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Méthode&nbsp;de&nbsp;récupération&nbsp;de&nbsp;l'identifiant&nbsp;de&nbsp;la&nbsp;ligne&nbsp;<a href="#Odoo">Odoo</a>&nbsp;en&nbsp;fonction&nbsp;du&nbsp;nom&nbsp;res.partner<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Odoo-__init__"><strong>__init__</strong></a>(self)</dt><dd><span class="code">Constructeur&nbsp;de&nbsp;la&nbsp;classe&nbsp;<a href="#Odoo">Odoo</a>,&nbsp;qui&nbsp;initialise&nbsp;l'authentification&nbsp;et&nbsp;le&nbsp;modèle&nbsp;des&nbsp;requêtes</span></dd></dl>
+
+<dl><dt><a name="Odoo-normalize_data"><strong>normalize_data</strong></a>(self, field_name, hotel_data, app_name)</dt><dd><span class="code">Méthode&nbsp;de&nbsp;récupération&nbsp;des&nbsp;identifiants&nbsp;et&nbsp;labels&nbsp;d'un&nbsp;modèle&nbsp;et&nbsp;normalisation&nbsp;des&nbsp;données<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+field_name&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;du&nbsp;champ&nbsp;à&nbsp;normaliser<br>
+hotel_data&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dictionnaire&nbsp;contenant&nbsp;les&nbsp;données&nbsp;de&nbsp;l'établissement<br>
+app_name&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;du&nbsp;modèle&nbsp;contenant&nbsp;les&nbsp;identifiants&nbsp;à&nbsp;remplacer</span></dd></dl>
+
+<dl><dt><a name="Odoo-prepare_data"><strong>prepare_data</strong></a>(self, hotel_data)</dt><dd><span class="code">Méthode&nbsp;de&nbsp;remplacement&nbsp;des&nbsp;valeurs&nbsp;par&nbsp;des&nbsp;identifiants&nbsp;pour&nbsp;créer&nbsp;une&nbsp;relation&nbsp;entre&nbsp;les&nbsp;modèles&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;catégorie&nbsp;établissement<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;pays<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;classement&nbsp;établissement<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;activité&nbsp;principale<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;activité&nbsp;hotel_data&nbsp;métiers<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;catégorie&nbsp;juridique<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;trnache&nbsp;effectifs&nbsp;établissment<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;trnache&nbsp;effectifs&nbsp;unité&nbsp;légale<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;note&nbsp;établissement<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+hotel_data&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dictionnaire&nbsp;contenant&nbsp;les&nbsp;données&nbsp;d'un&nbsp;établissement</span></dd></dl>
+
+<dl><dt><a name="Odoo-query_odoo_backup"><strong>query_odoo_backup</strong></a>(self)</dt><dd><span class="code">Méthode&nbsp;de&nbsp;récupération&nbsp;et&nbsp;d'écriture&nbsp;de&nbsp;toutes&nbsp;les&nbsp;lignes&nbsp;présente&nbsp;dans&nbsp;<a href="#Odoo">Odoo</a></span></dd></dl>
+
+<dl><dt><a name="Odoo-query_odoo_post"><strong>query_odoo_post</strong></a>(self, hotel_data)</dt><dd><span class="code">Méthode&nbsp;de&nbsp;publication&nbsp;des&nbsp;nouveaux&nbsp;établissements&nbsp;dans&nbsp;<a href="#Odoo">Odoo</a><br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+hotel_data&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dictionnaire&nbsp;contenant&nbsp;les&nbsp;données&nbsp;à&nbsp;publier&nbsp;sur&nbsp;<a href="#Odoo">Odoo</a></span></dd></dl>
+
+<dl><dt><a name="Odoo-query_odoo_put"><strong>query_odoo_put</strong></a>(self, id_odoo, hotel_data)</dt><dd><span class="code">Méthode&nbsp;de&nbsp;publication&nbsp;des&nbsp;modifications&nbsp;d'un&nbsp;établissement&nbsp;dans&nbsp;<a href="#Odoo">Odoo</a><br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+id_odoo&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Identifiant&nbsp;<a href="#Odoo">Odoo</a>&nbsp;de&nbsp;l'établissement&nbsp;à&nbsp;modifier<br>
+hotel_data&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dictionnaire&nbsp;contenant&nbsp;les&nbsp;données&nbsp;à&nbsp;publier&nbsp;sur&nbsp;<a href="#Odoo">Odoo</a></span></dd></dl>
+
+<dl><dt><a name="Odoo-query_search_id"><strong>query_search_id</strong></a>(self, url)</dt><dd><span class="code">Méthode&nbsp;de&nbsp;récupération&nbsp;de&nbsp;l'identifiant&nbsp;de&nbsp;la&nbsp;ligne&nbsp;<a href="#Odoo">Odoo</a>&nbsp;en&nbsp;fonction&nbsp;de&nbsp;l'url&nbsp;Booking<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+url&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Url&nbsp;Booking&nbsp;de&nbsp;l'hôtel&nbsp;à&nbsp;rechercher<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+record&nbsp;:&nbsp;list[dict]</span></dd></dl>
+
+<dl><dt><a name="Odoo-query_search_read_name"><strong>query_search_read_name</strong></a>(self, app_name)</dt><dd><span class="code">Méthode&nbsp;de&nbsp;récupération&nbsp;des&nbsp;identifiants&nbsp;des&nbsp;labels&nbsp;d'un&nbsp;modèle<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+app_name&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;du&nbsp;modèle<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+[{'id'&nbsp;:&nbsp;'&lt;id1&gt;',&nbsp;'name'&nbsp;:&nbsp;'&lt;NAME1&gt;'},&nbsp;{'id'&nbsp;:&nbsp;'&lt;id2&gt;',&nbsp;'name'&nbsp;:&nbsp;'&lt;NAME2&gt;'}]&nbsp;:&nbsp;list[dict]</span></dd></dl>
+
+<dl><dt><a name="Odoo-query_search_res_name"><strong>query_search_res_name</strong></a>(self, name)</dt><dd><span class="code">Méthode&nbsp;de&nbsp;récupération&nbsp;de&nbsp;l'identifiant&nbsp;de&nbsp;la&nbsp;ligne&nbsp;<a href="#Odoo">Odoo</a>&nbsp;en&nbsp;fonction&nbsp;du&nbsp;nom&nbsp;res.partner<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+name&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;provenant&nbsp;d'<a href="#Odoo">Odoo</a><br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+record&nbsp;:&nbsp;list[int]&nbsp;|&nbsp;list[]</span></dd></dl>
+
+<dl><dt><a name="Odoo-test_odoo"><strong>test_odoo</strong></a>(self)</dt><dd><span class="code">DEBUG<br>
+&nbsp;<br>
+Fonction&nbsp;de&nbsp;debug&nbsp;test</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-replace_value_with_id"><strong>replace_value_with_id</strong></a>(categorie_label, value)</dt><dd><span class="code">Fonction&nbsp;de&nbsp;remplacement&nbsp;des&nbsp;valeurs&nbsp;par&nbsp;des&nbsp;identifiants&nbsp;pour&nbsp;la&nbsp;crétion&nbsp;de&nbsp;relations&nbsp;entre&nbsp;les&nbsp;modèles<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+categorie_label&nbsp;:&nbsp;list[dict[str,&nbsp;str]]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Liste&nbsp;des&nbsp;labels<br>
+value&nbsp;:&nbsp;list[dict[str,&nbsp;str]]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Liste&nbsp;des&nbsp;valeurs<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+data&nbsp;:&nbsp;dict[str,&nbsp;str]</span></dd></dl>
+ <dl><dt><a name="-replace_value_with_id_note"><strong>replace_value_with_id_note</strong></a>(categorie_note, hotel_note)</dt><dd><span class="code">Fonction&nbsp;de&nbsp;remplacement&nbsp;des&nbsp;valeurs&nbsp;par&nbsp;des&nbsp;identifiants&nbsp;pour&nbsp;la&nbsp;création&nbsp;d'une&nbsp;relation&nbsp;avec&nbsp;le&nbsp;modèle&nbsp;des&nbsp;notes<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+categorie_note&nbsp;:&nbsp;list[dict[str,&nbsp;str]]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Liste&nbsp;des&nbsp;labels&nbsp;des&nbsp;notes<br>
+hotel_note&nbsp;:&nbsp;list[dict[str,&nbsp;str]]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Liste&nbsp;des&nbsp;valeurs&nbsp;des&nbsp;notes<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+data&nbsp;:&nbsp;list[tuple[int,&nbsp;int,&nbsp;dict]]</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>categorie_etablissement_fields</strong> = {'id': 'id', 'x_name': 'x_name'}<br>
+<strong>categorie_note_fields</strong> = {'id': 'id', 'x_name': 'x_name'}<br>
+<strong>note_etablissement_fields</strong> = {'id': 'id', 'x_studio_categorie_note': 'x_studio_type', 'x_studio_date': 'x_studio_date', 'x_studio_note': 'x_studio_note'}<br>
+<strong>odoo_fields_names</strong> = {'activite_principale': 'x_studio_activite_principale', 'activite_registre_metiers': 'x_studio_activite_registre_metiers', 'adresse': 'street', 'adresse2': 'street2', 'categorie': 'x_studio_categorie_etablissement', 'categorie_juridique': 'x_studio_categorie_juridique', 'classement': 'x_studio_classement', 'code_cedex': 'x_studio_code_cedex', 'code_postal': 'zip', 'comment': 'comment', ...}</td></tr></table>
+</body></html>

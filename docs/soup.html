@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module soup</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">soup</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cschmi%5Cpycharmprojects%5Cscraping_booking%5Cfunctions%5Csoup.py">c:\users\schmi\pycharmprojects\scraping_booking\functions\soup.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="re.html">re</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-in_soup_adr_complete"><strong>in_soup_adr_complete</strong></a>(soup_hotel)</dt><dd><span class="code">Fonction&nbsp;de&nbsp;récupération&nbsp;de&nbsp;l'adresse&nbsp;complète&nbsp;de&nbsp;l'hôtel&nbsp;dans&nbsp;la&nbsp;page&nbsp;Booking<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+soup_hotel&nbsp;:&nbsp;BeautifulSoup<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Code&nbsp;source&nbsp;de&nbsp;la&nbsp;page&nbsp;Booking<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+adr_complete&nbsp;:&nbsp;str</span></dd></dl>
+ <dl><dt><a name="-in_soup_adresse"><strong>in_soup_adresse</strong></a>(adr_complete)</dt><dd><span class="code">Fonction&nbsp;de&nbsp;récupération&nbsp;de&nbsp;l'adresse&nbsp;de&nbsp;l'hôtel&nbsp;dans&nbsp;la&nbsp;page&nbsp;Booking<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+adr_complete&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Adresse&nbsp;complète&nbsp;sans&nbsp;formatage<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+adresse&nbsp;:&nbsp;str</span></dd></dl>
+ <dl><dt><a name="-in_soup_categorie"><strong>in_soup_categorie</strong></a>(soup_hotel)</dt><dd><span class="code">Fonction&nbsp;de&nbsp;récupération&nbsp;de&nbsp;la&nbsp;catégorie&nbsp;de&nbsp;l'hôtel&nbsp;dans&nbsp;la&nbsp;page&nbsp;Booking<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+soup_hotel&nbsp;:&nbsp;BeautifulSoup<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Code&nbsp;source&nbsp;de&nbsp;la&nbsp;page&nbsp;Booking<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+categorie&nbsp;:&nbsp;str</span></dd></dl>
+ <dl><dt><a name="-in_soup_code_postal"><strong>in_soup_code_postal</strong></a>(adr_complete)</dt><dd><span class="code">Fonction&nbsp;de&nbsp;récupération&nbsp;du&nbsp;code&nbsp;postal&nbsp;de&nbsp;l'hôtel&nbsp;dans&nbsp;la&nbsp;page&nbsp;Booking<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+adr_complete&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Adresse&nbsp;complète&nbsp;sans&nbsp;formatage<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+code_postal&nbsp;:&nbsp;str</span></dd></dl>
+ <dl><dt><a name="-in_soup_nb_avis"><strong>in_soup_nb_avis</strong></a>(soup_hotel)</dt><dd><span class="code">Fonction&nbsp;de&nbsp;récupération&nbsp;du&nbsp;nombre&nbsp;d'avis&nbsp;de&nbsp;l'hôtel&nbsp;dans&nbsp;la&nbsp;page&nbsp;Booking<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+soup_hotel&nbsp;:&nbsp;BeautifulSoup<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Code&nbsp;source&nbsp;de&nbsp;la&nbsp;page&nbsp;Booking<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+nb_avis&nbsp;:&nbsp;str</span></dd></dl>
+ <dl><dt><a name="-in_soup_nom_hotel"><strong>in_soup_nom_hotel</strong></a>(soup_hotel)</dt><dd><span class="code">Fonction&nbsp;de&nbsp;récupération&nbsp;du&nbsp;nom&nbsp;de&nbsp;l'hôtel&nbsp;dans&nbsp;la&nbsp;page&nbsp;Booking<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+soup_hotel&nbsp;:&nbsp;BeautifulSoup<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Code&nbsp;source&nbsp;de&nbsp;la&nbsp;page&nbsp;Booking<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+nom_hotel&nbsp;:&nbsp;str</span></dd></dl>
+ <dl><dt><a name="-in_soup_nombre_etoile"><strong>in_soup_nombre_etoile</strong></a>(soup_hotel)</dt><dd><span class="code">Fonction&nbsp;de&nbsp;récupération&nbsp;du&nbsp;nombre&nbsp;d'étoiles&nbsp;attribué&nbsp;par&nbsp;Booking<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+soup_hotel&nbsp;:&nbsp;BeautifulSoup<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Code&nbsp;source&nbsp;de&nbsp;la&nbsp;page&nbsp;Booking<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+nombre_etoile&nbsp;:&nbsp;str</span></dd></dl>
+ <dl><dt><a name="-in_soup_note_label"><strong>in_soup_note_label</strong></a>(soup_hotel)</dt><dd><span class="code">Fonction&nbsp;de&nbsp;récupération&nbsp;des&nbsp;labels&nbsp;et&nbsp;des&nbsp;notes&nbsp;de&nbsp;l'hôtel&nbsp;dans&nbsp;la&nbsp;page&nbsp;Booking<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+soup_hotel&nbsp;:&nbsp;BeautifulSoup<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Code&nbsp;source&nbsp;de&nbsp;la&nbsp;page&nbsp;Booking<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+label&nbsp;:&nbsp;set(str)&nbsp;|&nbsp;None</span></dd></dl>
+ <dl><dt><a name="-in_soup_pays"><strong>in_soup_pays</strong></a>(adr_complete)</dt><dd><span class="code">Fonction&nbsp;de&nbsp;récupération&nbsp;du&nbsp;pays&nbsp;de&nbsp;l'hôtel&nbsp;dans&nbsp;la&nbsp;page&nbsp;Booking<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+adr_complete&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Adresse&nbsp;complète&nbsp;sans&nbsp;formatage<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+pays&nbsp;:&nbsp;str</span></dd></dl>
+ <dl><dt><a name="-in_soup_ville"><strong>in_soup_ville</strong></a>(adr_complete)</dt><dd><span class="code">Fonction&nbsp;de&nbsp;récupération&nbsp;de&nbsp;la&nbsp;ville&nbsp;de&nbsp;l'hôtel&nbsp;dans&nbsp;la&nbsp;page&nbsp;Booking<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+adr_complete&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Adresse&nbsp;complète&nbsp;sans&nbsp;formatage<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+ville&nbsp;:&nbsp;str</span></dd></dl>
+ <dl><dt><a name="-soup_page_booking"><strong>soup_page_booking</strong></a>(page)</dt><dd><span class="code">Fonction&nbsp;permettant&nbsp;de&nbsp;récupérer&nbsp;le&nbsp;code&nbsp;source&nbsp;de&nbsp;la&nbsp;page&nbsp;Booking<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+page&nbsp;:&nbsp;Response<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Résultat&nbsp;de&nbsp;la&nbsp;requête&nbsp;à&nbsp;l'url&nbsp;Booking<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+soup_hotel&nbsp;:&nbsp;BeautifulSoup</span></dd></dl>
+</td></tr></table>
+</body></html>

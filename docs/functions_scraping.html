@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module functions_scraping</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">functions_scraping</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cschmi%5Cpycharmprojects%5Cscraping_booking%5Cfunctions%5Cfunctions_scraping.py">c:\users\schmi\pycharmprojects\scraping_booking\functions\functions_scraping.py</a></td></tr></table>
+    <p><span class="code">#&nbsp;coding=utf8</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="csv.html">csv</a><br>
+<a href="random.html">random</a><br>
+</td><td class="multicolumn"><a href="re.html">re</a><br>
+<a href="requests.html">requests</a><br>
+</td><td class="multicolumn"><a href="unidecode.html">unidecode</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-assoc_scrap_siren"><strong>assoc_scrap_siren</strong></a>(hotel_data)</dt><dd><span class="code">Fonction&nbsp;d'association&nbsp;entre&nbsp;les&nbsp;établissements&nbsp;Booking&nbsp;et&nbsp;Siren&nbsp;en&nbsp;comparant&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Pays<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Code&nbsp;postal<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Ville<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Adresse<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+hotel_data&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Modèle&nbsp;de&nbsp;données&nbsp;contenant&nbsp;les&nbsp;informations&nbsp;d'un&nbsp;établissement<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+res_name&nbsp;:&nbsp;list[str]</span></dd></dl>
+ <dl><dt><a name="-convert_string_to_assoc"><strong>convert_string_to_assoc</strong></a>(string, purge)</dt><dd><span class="code">Fonction&nbsp;de&nbsp;formatage&nbsp;des&nbsp;chaines&nbsp;de&nbsp;caractères&nbsp;pour&nbsp;l'association&nbsp;de&nbsp;l'id&nbsp;respartner&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Mise&nbsp;en&nbsp;majuscules<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Suppression&nbsp;des&nbsp;caractères&nbsp;spéciaux<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Séparation&nbsp;par&nbsp;"&nbsp;"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Suppression&nbsp;de&nbsp;l'arrondissement&nbsp;dans&nbsp;l'adresse&nbsp;de&nbsp;la&nbsp;rue<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Suppression&nbsp;des&nbsp;mots&nbsp;de&nbsp;deux&nbsp;caractères&nbsp;ou&nbsp;moins<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+string&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Chaines&nbsp;de&nbsp;caractères&nbsp;à&nbsp;formatter<br>
+purge&nbsp;:&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Booléen&nbsp;pour&nbsp;supprimer&nbsp;les&nbsp;mots&nbsp;faisant&nbsp;moins&nbsp;de&nbsp;deux&nbsp;caractères<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+string_ordered&nbsp;:&nbsp;list[str]</span></dd></dl>
+ <dl><dt><a name="-get_date_log"><strong>get_date_log</strong></a>()</dt><dd><span class="code">Récupération&nbsp;de&nbsp;la&nbsp;date&nbsp;actuelle<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+str(datetime.now().strftime('%d/%m/%Y&nbsp;%H:%M:%S'))&nbsp;:&nbsp;str</span></dd></dl>
+ <dl><dt><a name="-get_date_scraping"><strong>get_date_scraping</strong></a>()</dt><dd><span class="code">Récupération&nbsp;de&nbsp;la&nbsp;date&nbsp;actuelle<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+str(datetime.now().strftime('%Y-%m-%d'))&nbsp;:&nbsp;str</span></dd></dl>
+ <dl><dt><a name="-requests_url_hotel"><strong>requests_url_hotel</strong></a>(url_hotel)</dt><dd><span class="code">Fonction&nbsp;de&nbsp;requête&nbsp;des&nbsp;pages&nbsp;Booking&nbsp;à&nbsp;l'aide&nbsp;d'un&nbsp;proxy<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+url_hotel&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Url&nbsp;de&nbsp;la&nbsp;page&nbsp;Booking<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+page&nbsp;:&nbsp;Response</span></dd></dl>
+ <dl><dt><a name="-scraping_booking"><strong>scraping_booking</strong></a>(url_hotel)</dt><dd><span class="code">Fonction&nbsp;de&nbsp;récupération&nbsp;et&nbsp;d'affectation&nbsp;des&nbsp;données&nbsp;Booking&nbsp;depuis&nbsp;le&nbsp;code&nbsp;source<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+url_hotel&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Url&nbsp;Booking&nbsp;de&nbsp;l'hôtel<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+[hotel_data,&nbsp;res_name]&nbsp;:&nbsp;list[Dict,&nbsp;list[str]]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Liste&nbsp;contenant&nbsp;les&nbsp;données&nbsp;de&nbsp;l'établissement&nbsp;et&nbsp;le&nbsp;nom&nbsp;utilisé&nbsp;dans&nbsp;le&nbsp;modèle&nbsp;Contact&nbsp;si&nbsp;l'établissement&nbsp;existe</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>odoo_fields_names</strong> = {'activite_principale': 'x_studio_activite_principale', 'activite_registre_metiers': 'x_studio_activite_registre_metiers', 'adresse': 'street', 'adresse2': 'street2', 'categorie': 'x_studio_categorie_etablissement', 'categorie_juridique': 'x_studio_categorie_juridique', 'classement': 'x_studio_classement', 'code_cedex': 'x_studio_code_cedex', 'code_postal': 'zip', 'comment': 'comment', ...}<br>
+<strong>res_siren_file</strong> = r'C:\Users\schmi\PycharmProjects\scraping_booking/res_siren/res_siren.csv'<br>
+<strong>siren_fields_names</strong> = {'activite_principale': 'activitePrincipaleEtablissement', 'activite_registre_metiers': 'activitePrincipaleRegistreMetiersEtablissement', 'activity_ids': 'activity_ids', 'adresse': 'adresseEtablissement', 'adresse2': 'complementAdresseEtablissement', 'categorie_juridique': 'categorieJuridiqueUniteLegale', 'category_id': 'category_id', 'code_cedex': 'codeCedexEtablissement', 'code_postal': 'codePostalEtablissement', 'comment': 'comment', ...}</td></tr></table>
+</body></html>

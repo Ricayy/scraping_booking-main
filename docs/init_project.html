@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module init_project</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">init_project</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/home/svasco/SabSystem/Odoo/scraping_booking/functions/init_project.py">/home/svasco/SabSystem/Odoo/scraping_booking/functions/init_project.py</a></td></tr></table>
+    <p><span class="code">#&nbsp;coding=utf8</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="csv.html">csv</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="subprocess.html">subprocess</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-init_project"><strong>init_project</strong></a>()</dt><dd><span class="code">Fonction&nbsp;de&nbsp;vérification&nbsp;de&nbsp;l'existence&nbsp;des&nbsp;dossiers&nbsp;et&nbsp;fichiers&nbsp;dans&nbsp;le&nbsp;projet&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;sitemaps/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;res_siren/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;res_siren.csv<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;odoo_backup/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;odoo_backup.csv<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;-&nbsp;odoo_post/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;odoo_post.csv<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;-&nbsp;odoo_put/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;odoo_put.csv<br>
+Création&nbsp;des&nbsp;documentations&nbsp;des&nbsp;fichiers&nbsp;de&nbsp;code&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Class/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Odoo.py<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;ScrapingProcessThread.py<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;ThreadState.py<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;functions/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;functions_scraping.py<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;init_project.py<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;proxies_list.py<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;soup.py<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;models/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;odoo_model.py<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;res_siren_model.py<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;odoo/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;odoo_backup.py<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;odoo_post.py<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;odoo_put.py</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>class_folder</strong> = '/home/svasco/SabSystem/Odoo/scraping_booking/Class'<br>
+<strong>docs_folder</strong> = '/home/svasco/SabSystem/Odoo/scraping_booking/docs'<br>
+<strong>error_log_folder</strong> = '/home/svasco/SabSystem/Odoo/scraping_booking/error_log'<br>
+<strong>functions_folder</strong> = '/home/svasco/SabSystem/Odoo/scraping_booking/functions'<br>
+<strong>models_folder</strong> = '/home/svasco/SabSystem/Odoo/scraping_booking/models'<br>
+<strong>odoo_backup_file</strong> = '/home/svasco/SabSystem/Odoo/scraping_booking/odoo_backup/odoo_backup_2024-08-02.csv'<br>
+<strong>odoo_backup_folder</strong> = '/home/svasco/SabSystem/Odoo/scraping_booking/odoo_backup'<br>
+<strong>odoo_fields_names_csv</strong> = ['name', 'street', 'street2', 'city', 'zip', 'country_id', 'phone', 'mobile', 'email', 'comment', 'company_type', 'partner_id', 'x_studio_date_scraping', 'x_studio_classement', 'x_studio_categorie_etablissement', 'x_studio_nombre_avis', 'x_studio_url_booking', 'x_studio_notes', 'x_studio_date', 'x_studio_type', ...]<br>
+<strong>odoo_folder</strong> = '/home/svasco/SabSystem/Odoo/scraping_booking/odoo'<br>
+<strong>odoo_post_file</strong> = '/home/svasco/SabSystem/Odoo/scraping_booking/odoo_post/odoo_post.csv'<br>
+<strong>odoo_post_folder</strong> = '/home/svasco/SabSystem/Odoo/scraping_booking/odoo_post'<br>
+<strong>odoo_put_file</strong> = '/home/svasco/SabSystem/Odoo/scraping_booking/odoo_put/odoo_put.csv'<br>
+<strong>odoo_put_folder</strong> = '/home/svasco/SabSystem/Odoo/scraping_booking/odoo_put'<br>
+<strong>res_siren_file</strong> = '/home/svasco/SabSystem/Odoo/scraping_booking/res_siren/res_siren.csv'<br>
+<strong>res_siren_folder</strong> = '/home/svasco/SabSystem/Odoo/scraping_booking/res_siren'<br>
+<strong>root_path</strong> = '/home/svasco/SabSystem/Odoo/scraping_booking'<br>
+<strong>sitemaps_folder</strong> = '/home/svasco/SabSystem/Odoo/scraping_booking/sitemaps'</td></tr></table>
+</body></html>
