@@ -17,6 +17,3 @@ Génération docstring : python -m pydoc -w <chemin_complet>
 - Authentification à l'API Odoo Online
 - Publication d'un CSV contenant toutes les nouvelles informations
 - Publication d'un CSV contenant toutes les modifications à apporter
-	
-# Documentation pour plus de détail :
-https://docs.google.com/document/d/10eGlnEiCcuW1lTfCadyAovUIg5dAx4856L1r055p93Q/edit?usp=sharing
